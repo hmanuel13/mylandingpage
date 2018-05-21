@@ -25,6 +25,7 @@ body{
   --cellPadding: 2px;
   --lightText: #efefef;
   --darkText: #1e1e1e;
+  --light-h2: #c2bcb0;
 }
 
 /* Main Container */
@@ -99,7 +100,7 @@ body{
   padding: var(--cellPadding);
 }
 
-/* Big Cells Grids */
+/* Big Cells Grids
 .cellGrids{
   display: grid;
   grid-template-columns: repeat(8,37.5px);
@@ -119,21 +120,19 @@ body{
   grid-column: 2/5;
   grid-row: 2/5;
   /* background: black; */
-}
-.cellGrids .content2{
+/* .cellGrids .content2{
   grid-column: 5/8;
   grid-row: 2/5;
   /* background: gray; */
-  }
-.cellGrids .content3{
+/* .cellGrids .content3{
   grid-column: 2/5;
   grid-row: 5/8;
-  /* background: white; */
+  background: white;
 }
 .cellGrids .content4{
   grid-column: 5/8;
   grid-row: 5/8;
-  /* background: black; */
+  background: black;
   }
 .cellGrids img{
   width: 100%;
@@ -143,13 +142,16 @@ body{
 }
 
 /* special cell properties */
-
 .cellCenterAll {
   display: grid;
   align-items: center;
   text-align: center;
 }
+.light-h2 h2{
+  color: var(--light-h2);
+}
 
+/* Media Queries */
 @media(max-width: 800px) {
    .container{
     display: grid;

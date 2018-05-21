@@ -7,7 +7,6 @@ body{
   margin: 2px;
   background: #121212;
 }
-
 #profile img{
   width: 130px;
   display: block;
@@ -52,6 +51,34 @@ body{
   grid-row: span 2;
   grid-column: span 2;
 }
+.bigCell h2{
+  text-align: center;
+}
+.bigCell ul{
+  display: inline-block;
+}
+.bigCell a:link{
+  text-decoration: none;
+}
+.bigCell a:visited{
+  text-decoration: none;
+}
+.bigCell li{
+  line-height: 1.5;
+}
+.bigCell img{
+  border: 2px solid black;
+}
+#left-column{
+  float: left;
+  width: 45%;
+  padding: 10px;
+}
+#right-column{
+  float: right;
+  width: 45%;
+  padding: 10px;
+}
 
 /* individual cell classes */
 .cell01{
@@ -77,7 +104,7 @@ body{
   display: grid;
   grid-template-columns: repeat(8,37.5px);
   grid-auto-rows: 37.5px;
-  grid-gap: 2px;
+  grid-gap: 4px;
   align-content: center;
   justify-content: center;
   font-family: 'Inconsolata', monospace;
@@ -91,23 +118,29 @@ body{
 .cellGrids .content1{
   grid-column: 2/5;
   grid-row: 2/5;
-  background: black;
+  /* background: black; */
 }
 .cellGrids .content2{
   grid-column: 5/8;
   grid-row: 2/5;
-  background: gray;
+  /* background: gray; */
   }
 .cellGrids .content3{
   grid-column: 2/5;
   grid-row: 5/8;
-  background: white;
+  /* background: white; */
 }
 .cellGrids .content4{
   grid-column: 5/8;
   grid-row: 5/8;
-  background: black;
+  /* background: black; */
   }
+.cellGrids img{
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 10%;
+}
 
 /* special cell properties */
 

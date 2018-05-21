@@ -10,7 +10,7 @@ body{
   font-family: Courier, 'Courier New',  monospace;
   padding: 2px;
   margin: 2px;
-  background: #1e1e1e;
+  background: #121212;
 }
 
 img{
@@ -19,21 +19,10 @@ img{
 
 :root{
   /* cell colors */
-  --cellColor1: #e6e2af;
-  --cellColor2: #acf0f2;
-  --cellColor3: #a7a37e;
-  --cellColor4: #cafcd8;
-  --cellColor5: #efecca;
-  --cellColor6: #a4cfbe;
-  --cellColor7: #aad8b0;
-  --cellColor8: #fcfff5;
-  --cellColor9: #77c4d3;
-  --cellColor10: #d1dbbd;
-  --cellColor11: lightblue;
-  --cellColor12: #91aa9d;
-  --cellColor13: #abc8e2;
-  --cellColor14: #efefef;
-  --cellColor15: #45432f;
+  --cellColor1: #1d3245;
+  --cellColor2: #c2bcb0;
+  --cellColor3: #546169;
+  --cellColor4: #787878;
 
   /* cell globals */
   --cellPadding: 2px;
@@ -52,84 +41,39 @@ img{
   grid-auto-flow: dense;
 }
 
+ /* Cells in different sizes */
 .tallCell{
   grid-row: span 2;
 }
-
+.tallerCell{
+  grid-row: span 3;
+}
 .wideCell{
   grid-column: span 2;
 }
-
 .bigCell{
   grid-row: span 2;
   grid-column: span 2;
 }
 
 
-
 /* individual cell classes */
 .cell01{
   background: var(--cellColor1);
   padding: var(--cellPadding);
+  color: var(--lightText);
 }
 .cell02{
   background: var(--cellColor2);
   padding: var(--cellPadding);
 }
 .cell03{
-  /* use for graphics, too dark for texts */
   background: var(--cellColor3);
   padding: var(--cellPadding);
 }
 .cell04{
   background: var(--cellColor4);
   padding: var(--cellPadding);
-}
-.cell05{
-  background: var(--cellColor5);
-  padding: var(--cellPadding);
-}
-.cell06{
-  background: var(--cellColor6);
-  padding: var(--cellPadding);
-}
-.cell07{
-  background: var(--cellColor7);
-  padding: var(--cellPadding);
-}
-.cell08{
-  background: var(--cellColor8);
-  padding: var(--cellPadding);
-}
-.cell09{
-  background: var(--cellColor9);
-  padding: var(--cellPadding);
-}
-.cell10{
-  background: var(--cellColor10);
-  padding: var(--cellPadding);
-}
-.cell11{
-  background: var(--cellColor11);
-  padding: var(--cellPadding);
-}
-.cell12{
-  background: var(--cellColor12);
-  padding: var(--cellPadding);
-}
-.cell13{
-  background: var(--cellColor13);
-  padding: var(--cellPadding);
-}
-.cell14{
-  background: var(--cellColor14);
-  padding: var(--cellPadding);
-}
-.cell15{
-  /* too dark, don't use just yet */
-  background: var(--cellColor15);
-  padding: var(--cellPadding);
-  color: var(--lightText);
 }
 
 /* special cell properties */

@@ -1,0 +1,189 @@
+/* Globals */
+
+ul {
+  padding: 10px;
+  margin: 2px;
+}
+
+body{
+  font-size: 12px;
+  font-family: Courier, 'Courier New',  monospace;
+  padding: 2px;
+  margin: 2px;
+  background: #1e1e1e;
+}
+
+img{
+  width: 150px;
+}
+
+:root{
+  /* cell colors */
+  --cellColor1: #e6e2af;
+  --cellColor2: #acf0f2;
+  --cellColor3: #a7a37e;
+  --cellColor4: #cafcd8;
+  --cellColor5: #efecca;
+  --cellColor6: #a4cfbe;
+  --cellColor7: #aad8b0;
+  --cellColor8: #fcfff5;
+  --cellColor9: #77c4d3;
+  --cellColor10: #d1dbbd;
+  --cellColor11: lightblue;
+  --cellColor12: #91aa9d;
+  --cellColor13: #abc8e2;
+  --cellColor14: #efefef;
+  --cellColor15: #45432f;
+
+  /* cell globals */
+  --cellPadding: 2px;
+  --lightText: #efefef;
+  --darkText: #1e1e1e;
+}
+
+/* Main Container */
+.container{
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-auto-rows: 150px;
+  grid-gap: 2px;
+  align-content: center;
+  justify-content: center;
+  grid-auto-flow: dense;
+}
+
+.tallCell{
+  grid-row: span 2;
+}
+
+.wideCell{
+  grid-column: span 2;
+}
+
+.bigCell{
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+
+
+/* individual cell classes */
+.cell01{
+  background: var(--cellColor1);
+  padding: var(--cellPadding);
+}
+.cell02{
+  background: var(--cellColor2);
+  padding: var(--cellPadding);
+}
+.cell03{
+  /* use for graphics, too dark for texts */
+  background: var(--cellColor3);
+  padding: var(--cellPadding);
+}
+.cell04{
+  background: var(--cellColor4);
+  padding: var(--cellPadding);
+}
+.cell05{
+  background: var(--cellColor5);
+  padding: var(--cellPadding);
+}
+.cell06{
+  background: var(--cellColor6);
+  padding: var(--cellPadding);
+}
+.cell07{
+  background: var(--cellColor7);
+  padding: var(--cellPadding);
+}
+.cell08{
+  background: var(--cellColor8);
+  padding: var(--cellPadding);
+}
+.cell09{
+  background: var(--cellColor9);
+  padding: var(--cellPadding);
+}
+.cell10{
+  background: var(--cellColor10);
+  padding: var(--cellPadding);
+}
+.cell11{
+  background: var(--cellColor11);
+  padding: var(--cellPadding);
+}
+.cell12{
+  background: var(--cellColor12);
+  padding: var(--cellPadding);
+}
+.cell13{
+  background: var(--cellColor13);
+  padding: var(--cellPadding);
+}
+.cell14{
+  background: var(--cellColor14);
+  padding: var(--cellPadding);
+}
+.cell15{
+  /* too dark, don't use just yet */
+  background: var(--cellColor15);
+  padding: var(--cellPadding);
+  color: var(--lightText);
+}
+
+/* special cell properties */
+.cellTextOverflow{
+  overflow: scroll;  
+}
+
+.cellCenterAll {
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+.dropCap {
+  float: left;
+  width: 0.7em;
+  font-size: 500%;
+  line-height: 80%;
+}
+
+@media(max-width: 800px) {
+   .container{
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+  }
+  .tallCell{
+    grid-row: span 2;
+  }
+
+  .wideCell{
+    grid-column: span 2;
+  }
+
+  .bigCell{
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+}
+
+  @media(max-width: 480px) {
+    .container{
+     display: grid;
+     grid-template-columns: repeat(2, 150px);
+    }
+    .tallCell{
+      grid-row: span 1;
+    }
+  
+    .wideCell{
+      grid-column: span 1;
+    }
+  
+    .bigCell{
+      grid-row: span 1;
+      grid-column: span 1;
+    }
+  }

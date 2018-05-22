@@ -124,21 +124,22 @@ body{
 
 /* Media Queries */
 @media(max-width: 800px) {
-   .container{
+  .container{
      display: grid;
      grid-template-columns: repeat(3, 150px);
   }
   .tallCell{
     grid-row: span 2;
   }
-  
   .wideCell{
     grid-column: span 2;
   }
-  
   .bigCell{
-    grid-row: span 1;
+    grid-row: span 2;
     grid-column: span 2;
+  }
+  .tallerCell{
+    grid-row: span 2;
   }
 }
 
@@ -150,14 +151,14 @@ body{
     .tallCell{
       grid-row: span 1;
     }
-  
+/*   
     .wideCell{
       grid-column: span 1;
-    }
+    } */
   
     .bigCell{
-      grid-row: span 1;
-      grid-column: span 1;
+      grid-row: span 2;
+      grid-column: span 2;
     }
   }
       /* Big Cells Grids

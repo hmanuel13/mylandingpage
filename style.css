@@ -80,7 +80,10 @@ body{
   width: 45%;
   padding: 10px;
 }
-
+.bigCell .titleText img{
+  display: block;
+  border: 0px;
+}
 /* individual cell classes */
 .cell01{
   background: var(--cellColor1);
@@ -94,54 +97,14 @@ body{
 .cell03{
   background: var(--cellColor3);
   padding: var(--cellPadding);
+  color: var(--lightText);
 }
 .cell04{
   background: var(--cellColor4);
   padding: var(--cellPadding);
 }
 
-/* Big Cells Grids
-.cellGrids{
-  display: grid;
-  grid-template-columns: repeat(8,37.5px);
-  grid-auto-rows: 37.5px;
-  grid-gap: 4px;
-  align-content: center;
-  justify-content: center;
-  font-family: 'Inconsolata', monospace;
-}
-.cellGrids header{
-  grid-column: 1/9;
-  grid-row: 1/2;
-  align-self: center;
-  justify-self: center;  
-}
-.cellGrids .content1{
-  grid-column: 2/5;
-  grid-row: 2/5;
-  /* background: black; */
-/* .cellGrids .content2{
-  grid-column: 5/8;
-  grid-row: 2/5;
-  /* background: gray; */
-/* .cellGrids .content3{
-  grid-column: 2/5;
-  grid-row: 5/8;
-  background: white;
-}
-.cellGrids .content4{
-  grid-column: 5/8;
-  grid-row: 5/8;
-  background: black;
-  }
-.cellGrids img{
-  width: 100%;
-  height: auto;
-  border: 1px solid black;
-  border-radius: 10%;
-}
-
-/* special cell properties */
+/* special element properties */
 .cellCenterAll {
   display: grid;
   align-items: center;
@@ -150,21 +113,29 @@ body{
 .light-h2 h2{
   color: var(--light-h2);
 }
+.socialMedia img{
+  width: 40px;
+}
+.socialMedia {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 10px;
+}
 
 /* Media Queries */
 @media(max-width: 800px) {
    .container{
-    display: grid;
-    grid-template-columns: repeat(3, 150px);
+     display: grid;
+     grid-template-columns: repeat(3, 150px);
   }
   .tallCell{
     grid-row: span 2;
   }
-
+  
   .wideCell{
     grid-column: span 2;
   }
-
+  
   .bigCell{
     grid-row: span 1;
     grid-column: span 2;
@@ -189,3 +160,43 @@ body{
       grid-column: span 1;
     }
   }
+      /* Big Cells Grids
+      .cellGrids{
+        display: grid;
+        grid-template-columns: repeat(8,37.5px);
+        grid-auto-rows: 37.5px;
+        grid-gap: 4px;
+        align-content: center;
+        justify-content: center;
+        font-family: 'Inconsolata', monospace;
+      }
+      .cellGrids header{
+        grid-column: 1/9;
+        grid-row: 1/2;
+        align-self: center;
+        justify-self: center;  
+      }
+      .cellGrids .content1{
+        grid-column: 2/5;
+        grid-row: 2/5;
+        /* background: black; */
+      /* .cellGrids .content2{
+        grid-column: 5/8;
+        grid-row: 2/5;
+        /* background: gray; */
+      /* .cellGrids .content3{
+        grid-column: 2/5;
+        grid-row: 5/8;
+        background: white;
+      }
+      .cellGrids .content4{
+        grid-column: 5/8;
+        grid-row: 5/8;
+        background: black;
+        }
+      .cellGrids img{
+        width: 100%;
+        height: auto;
+        border: 1px solid black;
+        border-radius: 10%;
+      }

@@ -45,10 +45,15 @@ body{
 .tallCell{
   grid-row: span 2;
 }
+ /* experimental for now */
 .tallerCell{
   grid-row: span 3;
 }
 .wideCell{
+  grid-column: span 2;
+}
+/* normal wide cell but encompasses 3 columns when at medium size viewport */
+.wideCellVPM3{
   grid-column: span 2;
 }
 .bigCell{
@@ -132,8 +137,17 @@ body{
   max-height: 100%;
 }
 
+/*  */
+/*  */
 /* Media Queries */
-@media(max-width: 800px) {
+/*  */
+/*  */
+
+/*  */
+/* medium viewport */
+/*  */
+
+@media only screen and (min-width: 481px) and  (max-width: 800px) {
   .container{
      display: grid;
      grid-template-columns: repeat(3, 150px);
@@ -148,31 +162,48 @@ body{
     grid-row: span 2;
     grid-column: span 2;
   }
+  /* experimental */
   .tallerCell{
     grid-row: span 2;
   }
+  /* wider in medium viewport size */
+  .wideCellVPM3{
+    grid-column: span 3;
+  }
 }
 
-  @media(max-width: 480px) {
-    .container{
-     display: grid;
-     grid-template-columns: repeat(2, 150px);
-    }
-    .tallCell{
-      grid-row: span 1;
-    }
-/*   
-    .wideCell{
-      grid-column: span 1;
-    } */
-  
-    .bigCell{
-      grid-row: span 2;
-      grid-column: span 2;
-    }
+/*  */
+/* small veiwport */
+/*  */
+
+@media (max-width: 480px) {
+  .container{
+   display: grid;
+   grid-template-columns: repeat(2, 150px);
   }
+  .tallCell{
+    grid-row: span 1;
+  }
+}
+  
+  .bigCell{
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+/* wider when viewport is at medium size */
+  .wideCellVPM3{
+    grid-column: span 2;
+  }
+  /* experimental */
+  /*   
+      .wideCell{
+        grid-column: span 1;
+}
 
 /* These sections need to be redone if using nested grids as the formatting needs more work */
+
+/* probably 8 or 12 frs? */
+
 /* Big Cells Grids
   .cellGrids{
     display: grid;

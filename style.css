@@ -28,6 +28,7 @@ body{
   --lightText: #efefef;
   --darkText: #1e1e1e;
   --light-h2: #c2bcb0;
+  --beigeText: #c2bcb0;
 }
 
 /* Main Container */
@@ -107,6 +108,9 @@ body{
 }
 
 /* special element properties */
+.beigeText {
+  color: var(--beigeText);
+}
 .cellCenterAll {
   display: grid;
   align-items: center;

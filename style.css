@@ -184,21 +184,19 @@ body{
   .tallCell{
     grid-row: span 1;
   }
-}
-  
   .bigCell{
     grid-row: span 2;
     grid-column: span 2;
   }
-/* wider when viewport is at medium size */
+wider when viewport is at medium size
   .wideCellVPM3{
     grid-column: span 2;
   }
+}
   /* experimental */
   /*   
       .wideCell{
         grid-column: span 1;
-}
 
 /* These sections need to be redone if using nested grids as the formatting needs more work */
 

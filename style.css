@@ -132,9 +132,13 @@ body{
   padding-left: 30px;
   padding-right: 10px;
 }
-.imageFit img{
-  width: 150px;
+.textOverflow{
+  overflow: scroll;
 }
+
+/* .imageFit img{
+  width: 147px;
+} */
 
 /*  */
 /*  */
